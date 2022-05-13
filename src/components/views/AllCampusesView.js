@@ -13,7 +13,7 @@ const AllCampusesView = (props) => {
   if (!campuses.length) {
     return (
       <div>
-        <p>There are no campus.</p>
+        <p>There are no campuses. Use the button below to add a new campus!</p>
         <Link to={`newcampus`}>
           <button>Add New Campus</button>
         </Link>
@@ -31,8 +31,9 @@ const AllCampusesView = (props) => {
             <h2>{campus.name}</h2>
           </Link>
           <h4>campus id: {campus.id}</h4>
-          <p>{campus.address}</p>
-          <p>{campus.description}</p>
+          <img src={campus.imageUrl} alt="campus" width="500" height="300"></img>
+          <br/>
+          
           <Link to={`/campus/${campus.id}/edit`}>
             <button>Edit</button>
           </Link>
