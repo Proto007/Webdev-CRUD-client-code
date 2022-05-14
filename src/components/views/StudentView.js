@@ -16,6 +16,13 @@ const StudentView = (props) => {
       <h1>{student.firstname + " " + student.lastname}</h1>
       <p>Email: {student.email}</p>
       {student.gpa && <p>GPA: {student.gpa}</p>}
+      {!student.campus && 
+      <div>
+        <p style={{color:"#555555"}}>Currently not enrolled in a CUNY college.</p>
+        <Link to={`${student.id}/edit`}>
+          <button>Update Student Information</button>
+        </Link>
+      </div>}
       {
         student.campus &&
         <Link to={`/campus/${student.campus.id}`}>
