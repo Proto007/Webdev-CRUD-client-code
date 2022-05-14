@@ -20,7 +20,7 @@ const StudentView = (props) => {
       <div>
         <p style={{color:"#555555"}}>Currently not enrolled in a CUNY college.</p>
         <Link to={`${student.id}/edit`}>
-          <button>Update Student Information</button>
+          <button className="edit-btn">Update Student Information</button>
         </Link>
       </div>}
       {

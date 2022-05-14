@@ -22,7 +22,7 @@ const CampusView = (props) => {
       <div>
         <p style={{color:"#555555"}}>Currently no students added to database.</p>
         <Link to={`newstudent`}>
-          <button>Add New Student</button>
+          <button className="add-new">Add New Student</button>
         </Link>
       </div>}
       {campus.students.map( student => {
