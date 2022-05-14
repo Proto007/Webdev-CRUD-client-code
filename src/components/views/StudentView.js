@@ -11,14 +11,17 @@ const StudentView = (props) => {
   // Render a single Student view 
   return (
     <div>
-      <img src={student.imageUrl} alt="student" width="400" height="500"></img>
+      <img src={student.imageUrl} alt="student" width="300" height="350"></img>
       <br/> 
       <h1>{student.firstname + " " + student.lastname}</h1>
-      <h1>Email: {student.email}</h1>
-      <h1>GPA: {student.gpa}</h1>
-      <Link to={`/campus/${student.campus.id}`}>
-        <h2>{student.campus.name}</h2>
-      </Link>
+      <p>Email: {student.email}</p>
+      {student.gpa && <p>GPA: {student.gpa}</p>}
+      {
+        student.campus &&
+        <Link to={`/campus/${student.campus.id}`}>
+          <h2>{student.campus.name}</h2>
+        </Link>
+      }
     </div>
   );
 

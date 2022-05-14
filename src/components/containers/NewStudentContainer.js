@@ -40,6 +40,11 @@ class NewStudentContainer extends Component {
   handleSubmit = async event => {
     event.preventDefault();  // Prevent browser reload/refresh after submit.
 
+    //If user left image field empty, replace empty input with default image
+    if(this.state.imageUrl===""){
+      this.setState({imageUrl:{imageUrl:"https://www.seekpng.com/png/small/17-176376_person-free-download-and-person-icon-png.png"}})
+    }
+
     let student = {
         firstname: this.state.firstname,
         lastname: this.state.lastname,
@@ -48,7 +53,7 @@ class NewStudentContainer extends Component {
         imageUrl: this.state.imageUrl,
         gpa: this.state.gpa
     };
-    
+
     // Add new student in back-end database
     let newStudent = await this.props.addStudent(student);
     

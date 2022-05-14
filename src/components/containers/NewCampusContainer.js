@@ -37,6 +37,11 @@ class NewCampusContainer extends Component {
   // Take action after user click the submit button
   handleSubmit = async event => {
     event.preventDefault();  // Prevent browser reload/refresh after submit.
+   
+    //If user left image field empty, replace empty input with default image
+    if(this.state.imageUrl===""){
+      this.setState({imageUrl:{imageUrl:"https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/853250/college-building-clipart-md.png"}})
+    }
 
     let campus = {
         name: this.state.name,
