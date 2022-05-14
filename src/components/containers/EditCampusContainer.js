@@ -38,6 +38,11 @@ class EditCampusContainer extends Component {
   handleSubmit = async event => {
     event.preventDefault();  // Prevent browser reload/refresh after submit.
 
+    //If user left image field empty, replace empty input with default image
+    if(this.state.imageUrl===""){
+      this.setState({imageUrl:{imageUrl:"https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/853250/college-building-clipart-md.png"}})
+    }
+
     //Get the campus id from the current link by parsing window.location.pathname
     let parseID=window.location.pathname.substring(8);
     parseID=parseID.substring(0,parseID.indexOf("/edit"));
