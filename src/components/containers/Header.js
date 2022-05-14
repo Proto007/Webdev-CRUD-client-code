@@ -22,13 +22,19 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     textAlign: 'left',
     fontType: 'bold',
-    fontFamily: 'sans-serif', 
+    fontFamily: 'courier', 
     fontSize: '35px', 
-    color: 'darkblue'
+    color: 'cyan',
+    backgroundColor: 'transparent',
+    '&:hover': {
+      color:"purple",
+   },
   },
   appBar:{
-    backgroundColor: '#fcb6bb',
+    backgroundColor: '#000000',
     shadows: ['none'],
+    position: 'fixed',
+    top:"0px"
   },
   greeting:{
     display: 'flex',
@@ -39,6 +45,15 @@ const useStyles = makeStyles(theme => ({
   },
   links:{
     textDecoration: 'none',
+  },
+  btns:{
+    color:'cyan',
+    backgroundColor:"transparent",
+    '&:hover': {
+      background: "cyan",
+      color: "black",
+      height: "80px"
+    },
   }
 }));
 
@@ -51,23 +66,17 @@ const Header = () => {
       <AppBar position="static" elevation={0} className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" className={classes.title} color="inherit" >
-            Campus Management System
+            <Link to=''><button className={classes.title}>Campus Management System</button></Link>
           </Typography>
 
-          <Link className={classes.links} to={'/'} >
-            <Button variant="contained" color="primary" style={{marginRight: '10px'}}>
-              Home
-            </Button>
-          </Link>
-
           <Link className={classes.links} to={'/campuses'} >
-            <Button variant="contained" color="primary" style={{marginRight: '10px'}}>
+            <Button className={classes.btns}>
               All Campuses
             </Button>
           </Link>
 
           <Link className={classes.links} to={'/students'} >
-            <Button variant="contained" color="primary">
+            <Button className={classes.btns}>
               All Students
             </Button>
           </Link>
