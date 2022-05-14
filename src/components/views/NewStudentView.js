@@ -41,7 +41,7 @@ const NewStudentView = (props) => {
   // Render a New Student view with an input form
   return (
     <div>
-      <h1>New Student</h1>
+      <h1 className="page-title">New Student</h1>
 
       <div className={classes.root}>
         <div className={classes.formContainer}>

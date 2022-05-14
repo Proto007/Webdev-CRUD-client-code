@@ -42,7 +42,7 @@ class NewStudentContainer extends Component {
 
     //If user left image field empty, replace empty input with default image
     if(this.state.imageUrl===""){
-      this.setState({imageUrl:{imageUrl:"https://www.seekpng.com/png/small/17-176376_person-free-download-and-person-icon-png.png"}})
+      this.setState({imageUrl:"https://www.seekpng.com/png/small/17-176376_person-free-download-and-person-icon-png.png"});
     }
 
     let student = {

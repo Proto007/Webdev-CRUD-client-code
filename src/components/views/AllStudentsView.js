@@ -14,7 +14,7 @@ const AllStudentsView = (props) => {
     <div>
       <p>There are no students. Use the button below to add a new student!</p>
       <Link to={`newstudent`}>
-        <button>Add New Student</button>
+        <button className="add-new">Add New Student</button>
       </Link>
     </div>
     );
@@ -23,7 +23,7 @@ const AllStudentsView = (props) => {
   // If there is at least one student, render All Students view 
   return (
     <div>
-      <h1>All Students</h1>
+      <h1 className="page-title">All Students</h1>
 
       {students.map((student) => {
           let name = student.firstname + " " + student.lastname;
@@ -34,9 +34,9 @@ const AllStudentsView = (props) => {
               </Link>
               {/* Edit button links to edit view for current studeny */}
               <Link to={`/student/${student.id}/edit`} >
-                <button>Edit</button>
+                <button className="edit-btn">Edit</button>
               </Link>
-              <button onClick={() => deleteStudent(student.id)}>Delete</button>
+              <button className="delete-btn" onClick={() => deleteStudent(student.id)}>Delete</button>
               <hr/>
             </div>
           );
@@ -44,7 +44,7 @@ const AllStudentsView = (props) => {
       )}
       <br/>
       <Link to={`/newstudent`}>
-        <button>Add New Student</button>
+        <button className="add-new">Add New Student</button>
       </Link>
       <br/><br/>
     </div>

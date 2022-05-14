@@ -41,7 +41,7 @@ class EditStudentContainer extends Component {
     event.preventDefault();  // Prevent browser reload/refresh after submit.
     //If user left image field empty, replace empty input with default image
     if(this.state.imageUrl===""){
-      this.setState({imageUrl:{imageUrl:"https://www.seekpng.com/png/small/17-176376_person-free-download-and-person-icon-png.png"}})
+      this.setState({imageUrl:"https://www.seekpng.com/png/small/17-176376_person-free-download-and-person-icon-png.png"});
     }
 
     //Get the student id from the current link by parsing window.location.pathname
