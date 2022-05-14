@@ -23,7 +23,7 @@ const AllStudentsView = (props) => {
   // If there is at least one student, render All Students view 
   return (
     <div>
-      <h1>All Students</h1>
+      <h1 className="page-title">All Students</h1>
 
       {students.map((student) => {
           let name = student.firstname + " " + student.lastname;
@@ -44,7 +44,7 @@ const AllStudentsView = (props) => {
       )}
       <br/>
       <Link to={`/newstudent`}>
-        <button>Add New Student</button>
+        <button className="add-new">Add New Student</button>
       </Link>
       <br/><br/>
     </div>

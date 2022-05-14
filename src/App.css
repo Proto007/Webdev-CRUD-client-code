@@ -1,20 +1,56 @@
 .App {
-  background-color: beige;
+  background-color: rgba(146, 197, 255, 0.877);
   min-height: 100vh;
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-.add-new{
-  color:aqua;
+/* Add button styling */
+.add-new {
+  font-size: 20px;
+  padding: 10px 30px;
+  color: #0aac3b;
+  text-transform: uppercase;
+}
+
+.add-new {
+  text-decoration: none;
+  border: 1px solid rgb(0, 255, 34);
+  position: relative;
+  overflow: hidden;
+}
+
+.add-new:hover {
+  box-shadow: 1px 1px 25px 10px rgb(146, 248, 155);
+}
+
+.add-new:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgb(146, 248, 163),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.add-new:hover:before {
+  left: 100%;
 }
 
 /* Edit button styling */
 .edit-btn {
-  font-size: 1.5rem;
+  font-size: 20px;
   padding: 10px 30px;
   color: #0400ff;
   text-transform: uppercase;
@@ -22,7 +58,7 @@
 
 .edit-btn {
   text-decoration: none;
-  border: 1px solid rgb(146, 148, 248);
+  border: 1px solid rgb(0, 4, 255);
   position: relative;
   overflow: hidden;
 }
@@ -53,7 +89,7 @@
 
 /* Delete button styling */
 .delete-btn {
-  font-size: 1.5rem;
+  font-size: 20px;
   padding: 10px 30px;
   color: #ff0000;
   text-transform: uppercase;
@@ -88,4 +124,15 @@
 
 .delete-btn:hover:before {
   left: 100%;
+}
+
+.page-title{
+  font-family:'Courier New', Courier, monospace;
+  font-size: xx-large;
+  color:rgb(117, 14, 109);
+}
+
+.page-content{
+  font-family:'Courier New', Courier, monospace;
+  color:cyan;
 }

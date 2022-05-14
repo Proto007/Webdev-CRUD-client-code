@@ -40,7 +40,7 @@ class NewCampusContainer extends Component {
    
     //If user left image field empty, replace empty input with default image
     if(this.state.imageUrl===""){
-      this.setState({imageUrl:{imageUrl:"https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/853250/college-building-clipart-md.png"}})
+      this.setState({imageUrl:"https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/853250/college-building-clipart-md.png"})
     }
 
     let campus = {

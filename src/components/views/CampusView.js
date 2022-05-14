@@ -13,15 +13,15 @@ const CampusView = (props) => {
   // Render a single Campus view with list of its students
   return (
     <div>
-      <h1>{campus.name}</h1>
+      <h1 className="page-title">{campus.name}</h1>
       <p>{campus.address}</p>
       <img src={campus.imageUrl} alt="campus" width="500" height="300"/>
       <br/>  
       {campus.description && <p>{campus.description}</p>}
-      {!campus.students.size && 
+      {!campus.students[0] &&
       <div>
         <p style={{color:"#555555"}}>Currently no students added to database.</p>
-        <Link to={`newstudent`}>
+        <Link to={`../newstudent`}>
           <button className="add-new">Add New Student</button>
         </Link>
       </div>}
